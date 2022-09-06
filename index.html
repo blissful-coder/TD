@@ -5,14 +5,40 @@
     <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'">
     <link href="./styles.css" rel="stylesheet">
-    <title>Hello World!</title>
+    <title>The TD App</title>
   </head>
   <body>
-    <h1>Hello World!</h1>
-    We are using Node.js <span id="node-version"></span>,
-    Chromium <span id="chrome-version"></span>,
-    and Electron <span id="electron-version"></span>.
-
+  
+  <!-- The Navigation nemu -->
+  <input class="menu-icon" type="checkbox" id="menu-icon" name="menu-icon"/>
+  	<label for="menu-icon"></label>
+  	<nav class="nav"> 		
+  		<ul class="pt-5">
+  			<li><a href="#" id="closeApp">Exit</a></li>
+  			<li><a href="#">About Me</a></li>
+  		</ul>
+  	</nav>
+<!-- The meading of the page -->
+    <h1>The TD App</h1>   
+<!-- The swimlane view -->
+<div class="row">
+  <div class="column" style="background-color:#aaa;">
+    <h2>Column 1</h2>
+    <p>Some text..</p>
+  </div>
+  <div class="column" style="background-color:#bbb;">
+    <h2>Column 2</h2>
+    <p>Some text..</p>
+  </div>
+  <div class="column" style="background-color:#ccc;">
+    <h2>Column 3</h2>
+    <p>Some text..</p>
+  </div>
+  <div class="column" style="background-color:#ddd;">
+    <h2>Column 4</h2>
+    <p>Some text..</p>
+  </div>
+</div>
     <!-- You can also require other files to run in this process -->
     <script src="./renderer.js"></script>
   </body>
