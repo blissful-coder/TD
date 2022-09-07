@@ -300,13 +300,22 @@ h1{
     box-sizing: border-box;
   }
   
+  .row-head {
+    display: flex;
+    height: 10vh;
+  }
+  .column-head {
+    margin: auto;
+    flex: 25%;
+    padding: 1vh;
+    text-align: center;
+    border-style: solid;
+  }
   .row {
     display: flex;
     height: 100vh;
-  }
-  
-  /* Create two equal columns that sits next to each other */
+  } 
   .column {
-    flex: 50%;
+    flex: 25%;
     padding: 50px;
   }
