@@ -305,11 +305,11 @@ h1{
     height: 10vh;
   }
   .column-head {
-    margin: auto;
     flex: 25%;
     padding: 1vh;
     text-align: center;
     border-style: solid;
+    z-index: 0;
   }
   .row {
     display: flex;
@@ -317,5 +317,112 @@ h1{
   } 
   .column {
     flex: 25%;
-    padding: 50px;
+    padding: 1vh;
+    z-index: -1;
   }
+
+/* CSS */
+.button-86 {
+  all: unset;
+  width: 1vh;
+  height: 1vh;
+  font-size: 2vh;
+  background: transparent;
+  border: none;
+  position: sticky;
+  color: #f0f0f0;
+  cursor: pointer;
+  z-index: 999;
+  padding: 1vh 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-86::after,
+.button-86::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -99999;
+  transition: all .4s;
+}
+
+.button-86::before {
+  transform: translate(0%, 0%);
+  width: 100%;
+  height: 100%;
+  background: #28282d;
+  border-radius: 10px;
+}
+
+.button-86::after {
+  transform: translate(10px, 10px);
+  width: 35px;
+  height: 35px;
+  background: #ffffff15;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 50px;
+}
+
+.button-86:hover::before {
+  transform: translate(5%, 20%);
+  width: 110%;
+  height: 110%;
+}
+
+.button-86:hover::after {
+  border-radius: 10px;
+  transform: translate(0, 0);
+  width: 100%;
+  height: 100%;
+}
+
+.button-86:active::after {
+  transition: 0s;
+  transform: translate(0, 25%);
+}
+
+.add-to-do.hide {
+  display: none;
+}
+
+.add-to-do {
+   display:inline-block;
+    position:relative;
+}
+
+.addtask-txt {
+  flex: 25%;
+  padding: 1vh;
+  background-color: transparent;
+    color: whitesmoke;
+}
+
+.add-task-button {
+  position:absolute;
+  bottom:10px;
+  right:10px;
+}
+
+#mydiv {
+  position: absolute;
+  z-index: 9;
+  background-color: #f1f1f1;
+  border: 1px solid #d3d3d3;
+  text-align: center;
+}
+
+#mydivheader {
+  padding: 10px;
+  cursor: move;
+  z-index: 10;
+  background-color: #2196F3;
+  color: #fff;
+}
